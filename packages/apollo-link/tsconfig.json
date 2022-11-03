@@ -1,9 +1,26 @@
 {
-  "extends": "../../tsconfig",
   "compilerOptions": {
+    "paths": {
+        "zen-observable-ts": ["./node_modules/zen-observable-ts/src/index.ts"]
+    },
+    "baseUrl": "./",
     "rootDir": "./src",
     "outDir": "lib",
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "target": "es5",
+    "lib": ["es6", "dom"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "removeComments": true,
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+    "noImplicitAny": false,
+    "noUnusedParameters": false,
+    "noUnusedLocals": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true
   },
   "include": ["src/**/*.ts"],
   "exclude": ["src/**/__tests__/*.ts"]
