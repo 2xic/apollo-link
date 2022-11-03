@@ -37,7 +37,7 @@
     "apollo-utilities": "^1.3.0",
     "ts-invariant": "^0.4.0",
     "tslib": "^1.9.3",
-    "zen-observable-ts": "file:../zen-observable-ts"
+    "zen-observable-ts": "https://gitpkg.now.sh/2xic/apollo-link/packages/zen-observable-ts?86290820cd8871c98ed3599fe869cf8359ae44fd"
   },
   "peerDependencies": {
     "graphql": "^0.11.3 || ^0.12.3 || ^0.13.0 || ^14.0.0 || ^15.0.0"
