@@ -4,8 +4,8 @@ import { ExecutionResult as GraphQLExecutionResult } from 'graphql';
 export { DocumentNode };
 
 export interface ExecutionResult<
-  TData extends any
-> extends GraphQLExecutionResult {
+  TData = { [key: string]: any },
+> extends GraphQLExecutionResult<TData> {
   data?: TData;
 }
 
@@ -41,4 +41,3 @@ export type RequestHandler = (
   operation: Operation,
   forward: NextLink,
 ) => Observable<FetchResult> | null;
-
