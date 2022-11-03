@@ -4,11 +4,9 @@ import { ExecutionResult as GraphQLExecutionResult } from 'graphql';
 export { DocumentNode };
 
 export interface ExecutionResult<
-  TData extends RecordUnknown = {
-    [key: string]: any;
-  }
+  TData extends any
 > extends GraphQLExecutionResult {
-  data?: TData | null;
+  data?: TData;
 }
 
 export interface GraphQLRequest {
@@ -30,7 +28,7 @@ export interface Operation {
 }
 
 export type FetchResult<
-  TData extends RecordUnknown = { [key: string]: any },
+  TData= any,
   C = Record<string, any>,
   E = Record<string, any>
 > = ExecutionResult<TData> & {
@@ -44,4 +42,3 @@ export type RequestHandler = (
   forward: NextLink,
 ) => Observable<FetchResult> | null;
 
-type RecordUnknown = Record<string, unknown>;
