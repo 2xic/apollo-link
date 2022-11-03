@@ -23,7 +23,8 @@
   },
   "homepage": "https://github.com/apollographql/apollo-link#readme",
   "scripts": {
-    "build": "tsc && rollup -c",
+    "postinstall": "npm run build",
+    "build": "tsc",
     "clean": "rimraf lib/* && rimraf coverage/*",
     "coverage": "jest --coverage",
     "filesize": "../../scripts/minify",
