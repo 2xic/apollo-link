@@ -1,4 +1,4 @@
-import Observable from 'zen-observable-ts';
+import {Observable} from 'zen-observable-ts';
 import { invariant, InvariantError } from 'ts-invariant';
 
 import {

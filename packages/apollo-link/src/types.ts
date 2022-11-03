@@ -1,4 +1,4 @@
-import Observable from 'zen-observable-ts';
+import {Observable} from 'zen-observable-ts';
 import { DocumentNode } from 'graphql/language/ast';
 import { ExecutionResult as GraphQLExecutionResult } from 'graphql';
 export { DocumentNode };

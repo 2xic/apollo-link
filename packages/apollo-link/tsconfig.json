@@ -1,8 +1,5 @@
 {
   "compilerOptions": {
-    "paths": {
-        "zen-observable-ts": ["./node_modules/zen-observable-ts/src/index.ts"]
-    },
     "baseUrl": "./",
     "rootDir": "./src",
     "outDir": "lib",

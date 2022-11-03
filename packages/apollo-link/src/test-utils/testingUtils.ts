@@ -1,3 +1,4 @@
+import { DocumentNode } from 'graphql';
 import gql from 'graphql-tag';
 import { execute, ApolloLink } from '../link';
 
@@ -26,7 +27,7 @@ export interface TestResultType {
 export function testLinkResults(params: TestResultType) {
   const { link, context, variables } = params;
   const results = params.results || [];
-  const query = params.query || sampleQuery;
+  const query = (params.query || sampleQuery) as DocumentNode;
   const done = params.done || (() => void 0);
 
   const spy = jest.fn();

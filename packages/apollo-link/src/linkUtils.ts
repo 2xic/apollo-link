@@ -1,4 +1,4 @@
-import Observable from 'zen-observable-ts';
+import {Observable} from 'zen-observable-ts';
 
 import { GraphQLRequest, Operation } from './types';
 import { ApolloLink } from './link';
